@@ -1,0 +1,22 @@
+# Python dependencies for the project.
+# Core LLM + Twitter integration
+openai
+tweepy
+python-dotenv
+PyYAML
+
+# NLP + style profiling
+keybert
+sentence-transformers
+vaderSentiment
+scikit-learn
+
+# Email
+smtplib-lite  # lightweight SMTP wrapper (optional, or use built-in smtplib)
+
+# Optional CLI/Review helpers
+rich
+click
+
+# (optional if Electron-based UI comes in later)
+flask

@@ -1,0 +1,6 @@
+# Configuration for model and runtime settings.
+# Example:
+# model:
+#   name: "gpt-4"
+# runtime:
+#   debug: false

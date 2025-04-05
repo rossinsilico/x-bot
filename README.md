@@ -1,15 +1,23 @@
-# Daily Dispatch Bot 🧠📬
+# X-Bot: Daily Dispatch Automation
 
-A local-first AI agent that generates daily tweet drafts in your voice and delivers them via email or an optional Electron UI. Built for privacy, reliability, and dev joy.
+This project automates the process of fetching, analyzing, generating, and posting tweets. It also includes optional features like email digests and a review interface.
 
-## ✨ Features
+## Features
+- Fetch Twitter content.
+- Analyze style, tone, sentiment, and topics.
+- Generate tweets using LLMs.
+- Optional review and posting interfaces.
+- Daily digest email support.
 
-- ✅ Runs daily via cron at 8AM with fallback retries
-- ✅ Fetches your tweets and learns your style
-- ✅ Generates tweet drafts using local LLMs (via Ollama) or OpenAI
-- ✅ Delivers suggestions via email each morning
-- ✅ Optional Electron UI for local review, editing, and approvals
-- ✅ Fully offline-capable and idempotent (won’t run twice per day)
+## Setup
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Configure `.env` and `config.yaml`.
+
+3. Schedule the script using cron (see `config/cron_setup.md`).
 
 ## 📁 Project Structure
 

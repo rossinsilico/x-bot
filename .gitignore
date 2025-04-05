@@ -172,3 +172,9 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Ignore sensitive and unnecessary files.
+.env
+__pycache__/
+*.pyc
+data/
