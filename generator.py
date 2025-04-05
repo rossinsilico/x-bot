@@ -1,2 +1,9 @@
-# Builds prompts and generates content using an LLM.
-# ...existing code or logic will go here...
+# generator.py
+
+def generate_tweets(config):
+    # Stubbed example tweets
+    return [
+        "Draft tweet 1: [placeholder]",
+        "Draft tweet 2: [placeholder]",
+        "Draft tweet 3: [placeholder]"
+    ]

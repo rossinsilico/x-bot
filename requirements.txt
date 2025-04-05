@@ -3,7 +3,8 @@
 openai
 tweepy
 python-dotenv
-PyYAML
+pyyaml
+
 
 # NLP + style profiling
 keybert

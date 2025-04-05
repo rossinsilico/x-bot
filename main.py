@@ -1,4 +1,3 @@
-# main.py
 # x-bot: Daily Dispatch Script
 # This script generates tweets using OpenAI or Ollama, saves them to a file, and optionally sends them via email.
 # It also checks if the script has already been run today to avoid duplicate processing.
