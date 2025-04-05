@@ -44,3 +44,11 @@ if __name__ == "__main__":
         print(f"❌ Error: {e}")
         with open("data/error.log", "a") as log:
             log.write(f"[{datetime.now()}] {str(e)}\n")
+
+# This script generates tweets using OpenAI or Ollama, saves them to a file, and optionally sends them via email.
+# It also checks if the script has already been run today to avoid duplicate processing.
+#
+# The script uses environment variables for SMTP configuration and loads them using dotenv.
+# It generates tweets based on a configuration file and saves them in a specific format.
+# The script also handles errors and logs them to a file.
+# The script is designed to be run as a standalone program and will execute the main function when run directly.
