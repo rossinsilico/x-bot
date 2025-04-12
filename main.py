@@ -7,17 +7,23 @@ from utils.time_check import already_sent_today, mark_sent
 from generator import generate_tweets
 from utils.emailer import send_daily_email
 import yaml
+from dotenv import load_dotenv
+load_dotenv()
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument("--force", action="store_true")
+args = parser.parse_args()
 
 # Load config
 with open("config/config.yaml", "r") as f:
-    config = yaml.safe_load(f)
+    raw_yaml = f.read()
+    config = yaml.safe_load(os.path.expandvars(raw_yaml))
 
 def run():
     print("🤖 Starting x-bot daily dispatch...")
 
-    if already_sent_today():
+    if not args.force and already_sent_today():
         print("✅ Already processed today. Skipping.")
-        return
 
     # Generate tweets (OpenAI or Ollama)
     drafts = generate_tweets(config)
@@ -47,7 +53,6 @@ if __name__ == "__main__":
 
 # This script generates tweets using OpenAI or Ollama, saves them to a file, and optionally sends them via email.
 # It also checks if the script has already been run today to avoid duplicate processing.
-#
 # The script uses environment variables for SMTP configuration and loads them using dotenv.
 # It generates tweets based on a configuration file and saves them in a specific format.
 # The script also handles errors and logs them to a file.

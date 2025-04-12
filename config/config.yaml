@@ -13,8 +13,11 @@ topics: []                  # Empty now — test run mode
 use_email: true
 use_ui: false
 
-# Email config (placeholder; update for SMTP)
 email:
-  from: "x-bot@local"
+  from: "${SMTP_USER}"
   to: "ross.pingatore@gmail.com"
   subject: "Ross’s Daily Dispatch – Drafts Ready"
+  smtp_server: "${SMTP_HOST}"
+  smtp_port: ${SMTP_PORT}
+  username: "${SMTP_USER}"
+  password: "${SMTP_PASS}"
