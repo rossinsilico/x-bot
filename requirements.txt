@@ -1,23 +1,25 @@
 # Python dependencies for the project.
 # Core LLM + Twitter integration
-openai
-tweepy
-python-dotenv
-pyyaml
-
+openai==1.3.7
+tweepy==4.14.0
+python-dotenv==1.0.0
+pyyaml==6.0.1
 
 # NLP + style profiling
-keybert
-sentence-transformers
-vaderSentiment
-scikit-learn
+keybert==0.7.0
+sentence-transformers==2.2.2
+vaderSentiment==3.3.2
+scikit-learn==1.3.2
 
 # Email
-smtplib-lite  # lightweight SMTP wrapper (optional, or use built-in smtplib)
 
 # Optional CLI/Review helpers
-rich
-click
+rich==13.7.0
+click==8.1.7
 
 # (optional if Electron-based UI comes in later)
-flask
+flask==2.3.3
+
+# LangChain + Ollama integration
+langchain==0.1.14
+langchain-community==0.0.30

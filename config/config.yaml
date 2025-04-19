@@ -1,13 +1,15 @@
 # config/config.yaml
 
 # Execution model
-model: ollama               # or "openai"
-model_name: hf.co/google/gemma-3-12b-it-qat-q4_0-gguf:latest    # used if Ollama is selected
+model:
+  engine: ollama
+  name: hf.co/google/gemma-3-12b-it-qat-q4_0-gguf:latest
+
 generation_hour: 8          # for logging/reference
 
 # Generation behavior
-max_tweets: 5
-topics: []                  # Empty now — test run mode
+generation:
+  num_drafts: 5
 
 # Output channels
 use_email: true

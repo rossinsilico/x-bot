@@ -1,9 +1,12 @@
-# generator.py
+from langchain_community.llms import Ollama
+from utils.prompt_builder import build_prompt
 
 def generate_tweets(config):
-    # Stubbed example tweets
-    return [
-        "Draft tweet 1: [placeholder]",
-        "Draft tweet 2: [placeholder]",
-        "Draft tweet 3: [placeholder]"
-    ]
+    model_name = config["model"]["name"]
+    num_drafts = config["generation"].get("num_drafts", 3)
+
+    llm = Ollama(model=model_name)
+    prompt = build_prompt(num=num_drafts)
+    output = llm.invoke(prompt)
+
+    return [line.strip("-• ") for line in output.split("\n") if line.strip()]

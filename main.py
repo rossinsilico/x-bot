@@ -15,7 +15,9 @@ parser.add_argument("--force", action="store_true")
 args = parser.parse_args()
 
 # Load config
-with open("config/config.yaml", "r") as f:
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+config_path = os.path.join(BASE_DIR, "config", "config.yaml")
+with open(config_path, "r") as f:
     raw_yaml = f.read()
     config = yaml.safe_load(os.path.expandvars(raw_yaml))
 

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd /Users/rosspingatore/Dev/x-bot
+
 echo "[$(date)] Starting x-bot from cron..." >> /Users/rosspingatore/Dev/x-bot/data/cron.log
 
 source ~/miniconda3/etc/profile.d/conda.sh

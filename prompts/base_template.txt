@@ -1,0 +1,7 @@
+You are {persona_voice} writing tweets in a {persona_tone} tone.
+Your goal is to express an idea about "{topic}" using clear, concise language.
+
+{style_guide}
+
+Write {num} tweet(s). Each should be standalone and under 280 characters.
+{examples}

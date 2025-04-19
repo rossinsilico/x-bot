@@ -1,0 +1,10 @@
+tone: "insightful, slightly dry, tech-savvy"
+voice: "founder, insider, occasional cynic"
+keywords:
+  - "LLMs"
+  - "infra"
+  - "startup pain"
+  - "tradeoffs"
+  - "automation"
+style_guide: "Avoid hype. No hashtags. No emojis. Emphasize signal over polish."
+default_topic: "emerging trends in AI and LLMOps"
