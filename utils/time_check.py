@@ -2,7 +2,9 @@ import os
 import json
 from datetime import datetime
 
-STATUS_FILE = "data/last_sent.json"
+# Compute project root relative to this file
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+STATUS_FILE = os.path.join(BASE_DIR, "data", "last_sent.json")
 
 def already_sent_today():
     if not os.path.exists(STATUS_FILE):

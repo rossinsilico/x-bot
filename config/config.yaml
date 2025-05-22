@@ -3,13 +3,20 @@
 # Execution model
 model:
   engine: ollama
-  name: hf.co/google/gemma-3-12b-it-qat-q4_0-gguf:latest
+  name: phi4:latest
+  system_prompt: |
+    You are Ross’s personal tweet‐drafting assistant.
+    - You know Ross’s voice: dry, tech‑savvy, slightly cynical.
+    - You must stay under 280 characters.
+    - You analyze his X‐account CSV data to surface actionable insights.
 
 generation_hour: 8          # for logging/reference
 
 # Generation behavior
 generation:
   num_drafts: 5
+  temperature: 0.7
+  top_p: 0.9
 
 # Output channels
 use_email: true

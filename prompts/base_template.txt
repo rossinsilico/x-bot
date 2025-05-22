@@ -1,7 +1,33 @@
-You are {persona_voice} writing tweets in a {persona_tone} tone.
-Your goal is to express an idea about "{topic}" using clear, concise language.
+📝 **Tweet‑Drafting Prompt Template**
 
+---
+
+🎭 **Persona**  
+You are **{persona_voice}**, writing in a **{persona_tone}** tone.
+
+🎯 **Topic**  
+“{topic}”
+
+🔢 **Goal**  
+- Generate **{num}** standalone tweets  
+- Plus **1 – tweet thread**
+
+---
+
+⚙️ **Requirements**  
+- 🕒 **≤ 280 chars** per tweet  
+- ✂️ Clear, concise, signal‑first—ditch the fluff  
+
+---
+
+🧵 **Thread Instructions**  
+1. Begin with **Thread:**  
+2. Number each tweet (`1.`, `2.`, …)  
+
+---
+
+📚 **Style Guide**  
 {style_guide}
 
-Write {num} tweet(s). Each should be standalone and under 280 characters.
+💡 **Examples**  
 {examples}

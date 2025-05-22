@@ -178,3 +178,5 @@ cython_debug/
 __pycache__/
 *.pyc
 data/
+
+.webui_secret_key
